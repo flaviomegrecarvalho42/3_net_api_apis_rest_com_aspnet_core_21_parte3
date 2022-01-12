@@ -1,0 +1,3300 @@
+{
+	"info": {
+		"_postman_id": "6b3f16d6-ad16-4116-a8c1-4ab2b931acc6",
+		"name": "3 - Alura - APIs Rest com Asp.NET Core 2.1 Parte 3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ListaLeitura",
+			"item": [
+				{
+					"name": "Versionamento via rota",
+					"item": [
+						{
+							"name": "Token JWT",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"login\": \"admin\",\r\n    \"password\": \"Admin123!\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/Login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"Login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Atualizar Livro - v1.0",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6IjYxMTdlMGYzLTk3ODQtNGEwNS1hMzYzLTlhNTUwYmRhYjRmZiIsImV4cCI6MTY0MTUwOTE2MywiaXNzIjoiQWx1cmEuV2ViQXBwIiwiYXVkIjoiUG9zdG1hbiJ9.UeHxkNyHaZhimRcSE2crFfdXN3VoiKPAm0Tao-u9YuA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "Id",
+											"value": "6022",
+											"type": "default"
+										},
+										{
+											"key": "Titulo",
+											"value": "Introdução à Visão Computacional",
+											"type": "default"
+										},
+										{
+											"key": "Subtitulo",
+											"value": "Uma abordagem prática com Python e OpenCV",
+											"type": "default"
+										},
+										{
+											"key": "Autor",
+											"value": "Felipe Barelu",
+											"type": "default"
+										},
+										{
+											"key": "Resumo",
+											"value": "",
+											"type": "default"
+										},
+										{
+											"key": "Capa",
+											"value": "",
+											"type": "default"
+										},
+										{
+											"key": "Lista",
+											"value": "Lidos",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:6001/api/v1.0/Livros",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6001",
+									"path": [
+										"api",
+										"v1.0",
+										"Livros"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Atualizar Livro - v2.0",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6IjYxMTdlMGYzLTk3ODQtNGEwNS1hMzYzLTlhNTUwYmRhYjRmZiIsImV4cCI6MTY0MTUwOTE2MywiaXNzIjoiQWx1cmEuV2ViQXBwIiwiYXVkIjoiUG9zdG1hbiJ9.UeHxkNyHaZhimRcSE2crFfdXN3VoiKPAm0Tao-u9YuA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "Id",
+											"value": "6022",
+											"type": "default"
+										},
+										{
+											"key": "Titulo",
+											"value": "Introdução à Visão Computacional",
+											"type": "default"
+										},
+										{
+											"key": "Subtitulo",
+											"value": "Uma abordagem prática com Python e OpenCV",
+											"type": "default"
+										},
+										{
+											"key": "Autor",
+											"value": "Felipe Barelu",
+											"type": "default"
+										},
+										{
+											"key": "Resumo",
+											"value": "",
+											"type": "default"
+										},
+										{
+											"key": "Capa",
+											"value": "",
+											"type": "default"
+										},
+										{
+											"key": "Lista",
+											"value": "Lidos",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:6001/api/v2.0/Livros",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6001",
+									"path": [
+										"api",
+										"v2.0",
+										"Livros"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Deletar Livro - v1.0",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6IjNiMWNhMjc3LWM1NzUtNDk0NC1hN2ZmLWUzZmVmNDlmMTg5ZSIsImV4cCI6MTY0MTQxMzQ5NCwiaXNzIjoiQWx1cmEuV2ViQXBwIiwiYXVkIjoiUG9zdG1hbiJ9.Wls5OHLS6DY12AfYMwB75IVkp-JnUSrUTd9QbjDbnKk",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:6001/api/v1.0/Livros/5021",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6001",
+									"path": [
+										"api",
+										"v1.0",
+										"Livros",
+										"5021"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Deletar Livro - v2.0",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6IjNiMWNhMjc3LWM1NzUtNDk0NC1hN2ZmLWUzZmVmNDlmMTg5ZSIsImV4cCI6MTY0MTQxMzQ5NCwiaXNzIjoiQWx1cmEuV2ViQXBwIiwiYXVkIjoiUG9zdG1hbiJ9.Wls5OHLS6DY12AfYMwB75IVkp-JnUSrUTd9QbjDbnKk",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:6001/api/v2.0/Livros/5021",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6001",
+									"path": [
+										"api",
+										"v2.0",
+										"Livros",
+										"5021"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Incluir Livro - v1.0",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6IjNiMWNhMjc3LWM1NzUtNDk0NC1hN2ZmLWUzZmVmNDlmMTg5ZSIsImV4cCI6MTY0MTQxMzQ5NCwiaXNzIjoiQWx1cmEuV2ViQXBwIiwiYXVkIjoiUG9zdG1hbiJ9.Wls5OHLS6DY12AfYMwB75IVkp-JnUSrUTd9QbjDbnKk",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "Titulo",
+											"value": "ASP.NET Core MVC",
+											"type": "default"
+										},
+										{
+											"key": "Subtitulo",
+											"value": "Aplicações modernas em conjunto com o Entity Framework",
+											"type": "default"
+										},
+										{
+											"key": "Autor",
+											"value": "Everton Coimbra de Araújo",
+											"type": "default"
+										},
+										{
+											"key": "Resumo",
+											"value": "Teste de inclusão de livro",
+											"type": "default"
+										},
+										{
+											"key": "Capa",
+											"value": "",
+											"type": "default"
+										},
+										{
+											"key": "Lista",
+											"value": "ParaLer",
+											"type": "default"
+										},
+										{
+											"key": "",
+											"value": "",
+											"type": "default",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:6001/api/v1.0/Livros",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6001",
+									"path": [
+										"api",
+										"v1.0",
+										"Livros"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Incluir Livro - v2.0",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6ImM4YjQzZmJmLWI1M2YtNDA3OS05ZTU5LTNhNjRiZDU0ZjE4NiIsImV4cCI6MTY0MTU3MDc5NiwiaXNzIjoiQWx1cmEuV2ViQXBwIiwiYXVkIjoiUG9zdG1hbiJ9.6piOW8TIRooFrJsy8Kazlbnnq2wWr05iymm93ouv9sw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "Titulo",
+											"value": "ASP.NET Core MVC",
+											"type": "default"
+										},
+										{
+											"key": "Subtitulo",
+											"value": "Aplicações modernas em conjunto com o Entity Framework",
+											"type": "default"
+										},
+										{
+											"key": "Autor",
+											"value": "Everton Coimbra de Araújo",
+											"type": "default"
+										},
+										{
+											"key": "Resumo",
+											"value": "Teste de inclusão de livro",
+											"type": "default"
+										},
+										{
+											"key": "Capa",
+											"value": "",
+											"type": "default"
+										},
+										{
+											"key": "Lista",
+											"value": "ParaLer",
+											"type": "default"
+										},
+										{
+											"key": "",
+											"value": "",
+											"type": "default",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:6001/api/v2.0/Livros",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6001",
+									"path": [
+										"api",
+										"v2.0",
+										"Livros"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Listar Capa do Livro - v1.0",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6ImM4YjQzZmJmLWI1M2YtNDA3OS05ZTU5LTNhNjRiZDU0ZjE4NiIsImV4cCI6MTY0MTU3MDc5NiwiaXNzIjoiQWx1cmEuV2ViQXBwIiwiYXVkIjoiUG9zdG1hbiJ9.6piOW8TIRooFrJsy8Kazlbnnq2wWr05iymm93ouv9sw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:6001/api/v1.0/Livros/capa/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6001",
+									"path": [
+										"api",
+										"v1.0",
+										"Livros",
+										"capa",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Listar Capa do Livro - v2.0",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6ImM4YjQzZmJmLWI1M2YtNDA3OS05ZTU5LTNhNjRiZDU0ZjE4NiIsImV4cCI6MTY0MTU3MDc5NiwiaXNzIjoiQWx1cmEuV2ViQXBwIiwiYXVkIjoiUG9zdG1hbiJ9.6piOW8TIRooFrJsy8Kazlbnnq2wWr05iymm93ouv9sw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:6001/api/v2.0/Livros/capa/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6001",
+									"path": [
+										"api",
+										"v2.0",
+										"Livros",
+										"capa",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Listar Listas de Leitura - v1.0",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6ImM4YjQzZmJmLWI1M2YtNDA3OS05ZTU5LTNhNjRiZDU0ZjE4NiIsImV4cCI6MTY0MTU3MDc5NiwiaXNzIjoiQWx1cmEuV2ViQXBwIiwiYXVkIjoiUG9zdG1hbiJ9.6piOW8TIRooFrJsy8Kazlbnnq2wWr05iymm93ouv9sw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:6001/api/v1.0/ListasLeitura",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6001",
+									"path": [
+										"api",
+										"v1.0",
+										"ListasLeitura"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Listar Listas de Leitura - v2.0",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6ImM4YjQzZmJmLWI1M2YtNDA3OS05ZTU5LTNhNjRiZDU0ZjE4NiIsImV4cCI6MTY0MTU3MDc5NiwiaXNzIjoiQWx1cmEuV2ViQXBwIiwiYXVkIjoiUG9zdG1hbiJ9.6piOW8TIRooFrJsy8Kazlbnnq2wWr05iymm93ouv9sw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:6001/api/v2.0/ListasLeitura",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6001",
+									"path": [
+										"api",
+										"v2.0",
+										"ListasLeitura"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Listar Lista de Leitura por Tipo - v1.0",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6ImM4YjQzZmJmLWI1M2YtNDA3OS05ZTU5LTNhNjRiZDU0ZjE4NiIsImV4cCI6MTY0MTU3MDc5NiwiaXNzIjoiQWx1cmEuV2ViQXBwIiwiYXVkIjoiUG9zdG1hbiJ9.6piOW8TIRooFrJsy8Kazlbnnq2wWr05iymm93ouv9sw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:6001/api/v1.0/ListasLeitura/ParaLer",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6001",
+									"path": [
+										"api",
+										"v1.0",
+										"ListasLeitura",
+										"ParaLer"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Listar Livros - v1.0",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6ImM4YjQzZmJmLWI1M2YtNDA3OS05ZTU5LTNhNjRiZDU0ZjE4NiIsImV4cCI6MTY0MTU3MDc5NiwiaXNzIjoiQWx1cmEuV2ViQXBwIiwiYXVkIjoiUG9zdG1hbiJ9.6piOW8TIRooFrJsy8Kazlbnnq2wWr05iymm93ouv9sw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/xml",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "http://localhost:6001/api/v1.0/Livros",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6001",
+									"path": [
+										"api",
+										"v1.0",
+										"Livros"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Listar Livros - v2.0",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6IjFkZGNjMTAwLWU5M2YtNGZkOS05MWMwLWUwYTgwYWViZjQ1YyIsImV4cCI6MTY0MTgyMTQ1MiwiaXNzIjoiQWx1cmEuV2ViQXBwIiwiYXVkIjoiUG9zdG1hbiJ9.vLSS749YiB_uQ-lXbf5av_p1vb7UQzZ-vg5CxqbYch0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/xml",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "http://localhost:6001/api/v2.0/Livros",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6001",
+									"path": [
+										"api",
+										"v2.0",
+										"Livros"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Listar Livro por Id - v1.0",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6ImM4YjQzZmJmLWI1M2YtNDA3OS05ZTU5LTNhNjRiZDU0ZjE4NiIsImV4cCI6MTY0MTU3MDc5NiwiaXNzIjoiQWx1cmEuV2ViQXBwIiwiYXVkIjoiUG9zdG1hbiJ9.6piOW8TIRooFrJsy8Kazlbnnq2wWr05iymm93ouv9sw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/csv",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "http://localhost:6001/api/v1.0/Livros/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6001",
+									"path": [
+										"api",
+										"v1.0",
+										"Livros",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Listar Livro por Id - v2.0",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6ImM4YjQzZmJmLWI1M2YtNDA3OS05ZTU5LTNhNjRiZDU0ZjE4NiIsImV4cCI6MTY0MTU3MDc5NiwiaXNzIjoiQWx1cmEuV2ViQXBwIiwiYXVkIjoiUG9zdG1hbiJ9.6piOW8TIRooFrJsy8Kazlbnnq2wWr05iymm93ouv9sw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/csv",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "http://localhost:6001/api/v2.0/Livros/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6001",
+									"path": [
+										"api",
+										"v2.0",
+										"Livros",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Versionamento via Header",
+					"item": [
+						{
+							"name": "Token JWT",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"login\": \"admin\",\r\n    \"password\": \"Admin123!\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/Login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"Login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Atualizar Livro - v1.0",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6IjYxMTdlMGYzLTk3ODQtNGEwNS1hMzYzLTlhNTUwYmRhYjRmZiIsImV4cCI6MTY0MTUwOTE2MywiaXNzIjoiQWx1cmEuV2ViQXBwIiwiYXVkIjoiUG9zdG1hbiJ9.UeHxkNyHaZhimRcSE2crFfdXN3VoiKPAm0Tao-u9YuA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "api-version",
+										"value": "1.0",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "Id",
+											"value": "6022",
+											"type": "default"
+										},
+										{
+											"key": "Titulo",
+											"value": "Introdução à Visão Computacional",
+											"type": "default"
+										},
+										{
+											"key": "Subtitulo",
+											"value": "Uma abordagem prática com Python e OpenCV",
+											"type": "default"
+										},
+										{
+											"key": "Autor",
+											"value": "Felipe Barelu",
+											"type": "default"
+										},
+										{
+											"key": "Resumo",
+											"value": "",
+											"type": "default"
+										},
+										{
+											"key": "Capa",
+											"value": "",
+											"type": "default"
+										},
+										{
+											"key": "Lista",
+											"value": "Lidos",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:6001/api/Livros",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6001",
+									"path": [
+										"api",
+										"Livros"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Atualizar Livro - v2.0",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6IjYxMTdlMGYzLTk3ODQtNGEwNS1hMzYzLTlhNTUwYmRhYjRmZiIsImV4cCI6MTY0MTUwOTE2MywiaXNzIjoiQWx1cmEuV2ViQXBwIiwiYXVkIjoiUG9zdG1hbiJ9.UeHxkNyHaZhimRcSE2crFfdXN3VoiKPAm0Tao-u9YuA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "api-version",
+										"value": "2.0",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "Id",
+											"value": "6022",
+											"type": "default"
+										},
+										{
+											"key": "Titulo",
+											"value": "Introdução à Visão Computacional",
+											"type": "default"
+										},
+										{
+											"key": "Subtitulo",
+											"value": "Uma abordagem prática com Python e OpenCV",
+											"type": "default"
+										},
+										{
+											"key": "Autor",
+											"value": "Felipe Barelu",
+											"type": "default"
+										},
+										{
+											"key": "Resumo",
+											"value": "",
+											"type": "default"
+										},
+										{
+											"key": "Capa",
+											"value": "",
+											"type": "default"
+										},
+										{
+											"key": "Lista",
+											"value": "Lidos",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:6001/api/Livros",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6001",
+									"path": [
+										"api",
+										"Livros"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Deletar Livro - v1.0",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6IjNiMWNhMjc3LWM1NzUtNDk0NC1hN2ZmLWUzZmVmNDlmMTg5ZSIsImV4cCI6MTY0MTQxMzQ5NCwiaXNzIjoiQWx1cmEuV2ViQXBwIiwiYXVkIjoiUG9zdG1hbiJ9.Wls5OHLS6DY12AfYMwB75IVkp-JnUSrUTd9QbjDbnKk",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "api-version",
+										"value": "1.0",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:6001/api/Livros/5021",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6001",
+									"path": [
+										"api",
+										"Livros",
+										"5021"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Deletar Livro - v2.0",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6IjNiMWNhMjc3LWM1NzUtNDk0NC1hN2ZmLWUzZmVmNDlmMTg5ZSIsImV4cCI6MTY0MTQxMzQ5NCwiaXNzIjoiQWx1cmEuV2ViQXBwIiwiYXVkIjoiUG9zdG1hbiJ9.Wls5OHLS6DY12AfYMwB75IVkp-JnUSrUTd9QbjDbnKk",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "api-version",
+										"value": "2.0",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:6001/api/Livros/5021",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6001",
+									"path": [
+										"api",
+										"Livros",
+										"5021"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Incluir Livro - v1.0",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6IjNiMWNhMjc3LWM1NzUtNDk0NC1hN2ZmLWUzZmVmNDlmMTg5ZSIsImV4cCI6MTY0MTQxMzQ5NCwiaXNzIjoiQWx1cmEuV2ViQXBwIiwiYXVkIjoiUG9zdG1hbiJ9.Wls5OHLS6DY12AfYMwB75IVkp-JnUSrUTd9QbjDbnKk",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "api-version",
+										"value": "1.0",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "Titulo",
+											"value": "ASP.NET Core MVC",
+											"type": "default"
+										},
+										{
+											"key": "Subtitulo",
+											"value": "Aplicações modernas em conjunto com o Entity Framework",
+											"type": "default"
+										},
+										{
+											"key": "Autor",
+											"value": "Everton Coimbra de Araújo",
+											"type": "default"
+										},
+										{
+											"key": "Resumo",
+											"value": "Teste de inclusão de livro",
+											"type": "default"
+										},
+										{
+											"key": "Capa",
+											"value": "",
+											"type": "default"
+										},
+										{
+											"key": "Lista",
+											"value": "ParaLer",
+											"type": "default"
+										},
+										{
+											"key": "",
+											"value": "",
+											"type": "default",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:6001/api/Livros",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6001",
+									"path": [
+										"api",
+										"Livros"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Incluir Livro - v2.0",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6IjNiMWNhMjc3LWM1NzUtNDk0NC1hN2ZmLWUzZmVmNDlmMTg5ZSIsImV4cCI6MTY0MTQxMzQ5NCwiaXNzIjoiQWx1cmEuV2ViQXBwIiwiYXVkIjoiUG9zdG1hbiJ9.Wls5OHLS6DY12AfYMwB75IVkp-JnUSrUTd9QbjDbnKk",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "api-version",
+										"value": "2.0",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "Titulo",
+											"value": "ASP.NET Core MVC",
+											"type": "default"
+										},
+										{
+											"key": "Subtitulo",
+											"value": "Aplicações modernas em conjunto com o Entity Framework",
+											"type": "default"
+										},
+										{
+											"key": "Autor",
+											"value": "Everton Coimbra de Araújo",
+											"type": "default"
+										},
+										{
+											"key": "Resumo",
+											"value": "Teste de inclusão de livro",
+											"type": "default"
+										},
+										{
+											"key": "Capa",
+											"value": "",
+											"type": "default"
+										},
+										{
+											"key": "Lista",
+											"value": "ParaLer",
+											"type": "default"
+										},
+										{
+											"key": "",
+											"value": "",
+											"type": "default",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:6001/api/Livros",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6001",
+									"path": [
+										"api",
+										"Livros"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Listar Capa do Livro - v1.0",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6IjYxMTdlMGYzLTk3ODQtNGEwNS1hMzYzLTlhNTUwYmRhYjRmZiIsImV4cCI6MTY0MTUwOTE2MywiaXNzIjoiQWx1cmEuV2ViQXBwIiwiYXVkIjoiUG9zdG1hbiJ9.UeHxkNyHaZhimRcSE2crFfdXN3VoiKPAm0Tao-u9YuA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "api-version",
+										"value": "1.0",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:6001/api/Livros/capa/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6001",
+									"path": [
+										"api",
+										"Livros",
+										"capa",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Listar Capa do Livro - v2.0",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6IjYxMTdlMGYzLTk3ODQtNGEwNS1hMzYzLTlhNTUwYmRhYjRmZiIsImV4cCI6MTY0MTUwOTE2MywiaXNzIjoiQWx1cmEuV2ViQXBwIiwiYXVkIjoiUG9zdG1hbiJ9.UeHxkNyHaZhimRcSE2crFfdXN3VoiKPAm0Tao-u9YuA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "api-version",
+										"value": "2.0",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:6001/api/Livros/capa/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6001",
+									"path": [
+										"api",
+										"Livros",
+										"capa",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Listar Listas de Leitura - v1.0",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6IjYxMTdlMGYzLTk3ODQtNGEwNS1hMzYzLTlhNTUwYmRhYjRmZiIsImV4cCI6MTY0MTUwOTE2MywiaXNzIjoiQWx1cmEuV2ViQXBwIiwiYXVkIjoiUG9zdG1hbiJ9.UeHxkNyHaZhimRcSE2crFfdXN3VoiKPAm0Tao-u9YuA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "api-version",
+										"value": "1.0",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:6001/api/ListasLeitura",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6001",
+									"path": [
+										"api",
+										"ListasLeitura"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Listar Listas de Leitura - v2.0",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6IjYxMTdlMGYzLTk3ODQtNGEwNS1hMzYzLTlhNTUwYmRhYjRmZiIsImV4cCI6MTY0MTUwOTE2MywiaXNzIjoiQWx1cmEuV2ViQXBwIiwiYXVkIjoiUG9zdG1hbiJ9.UeHxkNyHaZhimRcSE2crFfdXN3VoiKPAm0Tao-u9YuA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "api-version",
+										"value": "2.0",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:6001/api/ListasLeitura",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6001",
+									"path": [
+										"api",
+										"ListasLeitura"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Listar Lista de Leitura por Tipo - v1.0",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6IjYxMTdlMGYzLTk3ODQtNGEwNS1hMzYzLTlhNTUwYmRhYjRmZiIsImV4cCI6MTY0MTUwOTE2MywiaXNzIjoiQWx1cmEuV2ViQXBwIiwiYXVkIjoiUG9zdG1hbiJ9.UeHxkNyHaZhimRcSE2crFfdXN3VoiKPAm0Tao-u9YuA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "api-version",
+										"value": "1.0",
+										"type": "default"
+									},
+									{
+										"key": "",
+										"value": "",
+										"type": "default",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "http://localhost:6001/api/ListasLeitura/ParaLer",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6001",
+									"path": [
+										"api",
+										"ListasLeitura",
+										"ParaLer"
+									],
+									"query": [
+										{
+											"key": "api-version",
+											"value": "1.0",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Listar Lista de Leitura por Tipo - v2.0",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6IjYxMTdlMGYzLTk3ODQtNGEwNS1hMzYzLTlhNTUwYmRhYjRmZiIsImV4cCI6MTY0MTUwOTE2MywiaXNzIjoiQWx1cmEuV2ViQXBwIiwiYXVkIjoiUG9zdG1hbiJ9.UeHxkNyHaZhimRcSE2crFfdXN3VoiKPAm0Tao-u9YuA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "api-version",
+										"value": "2.0",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:6001/api/ListasLeitura/ParaLer",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6001",
+									"path": [
+										"api",
+										"ListasLeitura",
+										"ParaLer"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Listar Livros - v1.0",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6IjYxMTdlMGYzLTk3ODQtNGEwNS1hMzYzLTlhNTUwYmRhYjRmZiIsImV4cCI6MTY0MTUwOTE2MywiaXNzIjoiQWx1cmEuV2ViQXBwIiwiYXVkIjoiUG9zdG1hbiJ9.UeHxkNyHaZhimRcSE2crFfdXN3VoiKPAm0Tao-u9YuA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "api-version",
+										"value": "1.0",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:6001/api/Livros",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6001",
+									"path": [
+										"api",
+										"Livros"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Listar Livros - v2.0",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6IjYxMTdlMGYzLTk3ODQtNGEwNS1hMzYzLTlhNTUwYmRhYjRmZiIsImV4cCI6MTY0MTUwOTE2MywiaXNzIjoiQWx1cmEuV2ViQXBwIiwiYXVkIjoiUG9zdG1hbiJ9.UeHxkNyHaZhimRcSE2crFfdXN3VoiKPAm0Tao-u9YuA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "api-version",
+										"value": "2.0",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:6001/api/Livros",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6001",
+									"path": [
+										"api",
+										"Livros"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Listar Livro por Id - v1.0",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6IjA4MjgxNzg2LTNlNjUtNGI1ZC1iZTg5LWY1ZTk4NzRjYjQ1OSIsImV4cCI6MTY0MTU2ODE4OSwiaXNzIjoiQWx1cmEuV2ViQXBwIiwiYXVkIjoiUG9zdG1hbiJ9.LGZ-vBrMG5Db3PGDk4Yd0hfadxKT5zPfa7u81M9U26E",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "api-version",
+										"value": "1.0",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:6001/api/Livros/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6001",
+									"path": [
+										"api",
+										"Livros",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Listar Livro por Id - v2.0",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6IjA4MjgxNzg2LTNlNjUtNGI1ZC1iZTg5LWY1ZTk4NzRjYjQ1OSIsImV4cCI6MTY0MTU2ODE4OSwiaXNzIjoiQWx1cmEuV2ViQXBwIiwiYXVkIjoiUG9zdG1hbiJ9.LGZ-vBrMG5Db3PGDk4Yd0hfadxKT5zPfa7u81M9U26E",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "api-version",
+										"value": "2.0",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:6001/api/Livros/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6001",
+									"path": [
+										"api",
+										"Livros",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Versionamento via Query String",
+					"item": [
+						{
+							"name": "Token JWT",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"login\": \"admin\",\r\n    \"password\": \"Admin123!\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/Login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"Login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Atualizar Livro - v1.0",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6IjYxMTdlMGYzLTk3ODQtNGEwNS1hMzYzLTlhNTUwYmRhYjRmZiIsImV4cCI6MTY0MTUwOTE2MywiaXNzIjoiQWx1cmEuV2ViQXBwIiwiYXVkIjoiUG9zdG1hbiJ9.UeHxkNyHaZhimRcSE2crFfdXN3VoiKPAm0Tao-u9YuA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "Id",
+											"value": "6022",
+											"type": "default"
+										},
+										{
+											"key": "Titulo",
+											"value": "Introdução à Visão Computacional",
+											"type": "default"
+										},
+										{
+											"key": "Subtitulo",
+											"value": "Uma abordagem prática com Python e OpenCV",
+											"type": "default"
+										},
+										{
+											"key": "Autor",
+											"value": "Felipe Barelu",
+											"type": "default"
+										},
+										{
+											"key": "Resumo",
+											"value": "",
+											"type": "default"
+										},
+										{
+											"key": "Capa",
+											"value": "",
+											"type": "default"
+										},
+										{
+											"key": "Lista",
+											"value": "Lidos",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:6001/api/Livros?api-version=1.0",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6001",
+									"path": [
+										"api",
+										"Livros"
+									],
+									"query": [
+										{
+											"key": "api-version",
+											"value": "1.0"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Atualizar Livro - v2.0",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6IjYxMTdlMGYzLTk3ODQtNGEwNS1hMzYzLTlhNTUwYmRhYjRmZiIsImV4cCI6MTY0MTUwOTE2MywiaXNzIjoiQWx1cmEuV2ViQXBwIiwiYXVkIjoiUG9zdG1hbiJ9.UeHxkNyHaZhimRcSE2crFfdXN3VoiKPAm0Tao-u9YuA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "Id",
+											"value": "6022",
+											"type": "default"
+										},
+										{
+											"key": "Titulo",
+											"value": "Introdução à Visão Computacional",
+											"type": "default"
+										},
+										{
+											"key": "Subtitulo",
+											"value": "Uma abordagem prática com Python e OpenCV",
+											"type": "default"
+										},
+										{
+											"key": "Autor",
+											"value": "Felipe Barelu",
+											"type": "default"
+										},
+										{
+											"key": "Resumo",
+											"value": "",
+											"type": "default"
+										},
+										{
+											"key": "Capa",
+											"value": "",
+											"type": "default"
+										},
+										{
+											"key": "Lista",
+											"value": "Lidos",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:6001/api/Livros?api-version=2.0",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6001",
+									"path": [
+										"api",
+										"Livros"
+									],
+									"query": [
+										{
+											"key": "api-version",
+											"value": "2.0"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Deletar Livro - v1.0",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6IjNiMWNhMjc3LWM1NzUtNDk0NC1hN2ZmLWUzZmVmNDlmMTg5ZSIsImV4cCI6MTY0MTQxMzQ5NCwiaXNzIjoiQWx1cmEuV2ViQXBwIiwiYXVkIjoiUG9zdG1hbiJ9.Wls5OHLS6DY12AfYMwB75IVkp-JnUSrUTd9QbjDbnKk",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:6001/api/Livros/5021?api-version=1.0",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6001",
+									"path": [
+										"api",
+										"Livros",
+										"5021"
+									],
+									"query": [
+										{
+											"key": "api-version",
+											"value": "1.0"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Deletar Livro - v2.0",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6IjNiMWNhMjc3LWM1NzUtNDk0NC1hN2ZmLWUzZmVmNDlmMTg5ZSIsImV4cCI6MTY0MTQxMzQ5NCwiaXNzIjoiQWx1cmEuV2ViQXBwIiwiYXVkIjoiUG9zdG1hbiJ9.Wls5OHLS6DY12AfYMwB75IVkp-JnUSrUTd9QbjDbnKk",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:6001/api/Livros/5021?api-version=2.0",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6001",
+									"path": [
+										"api",
+										"Livros",
+										"5021"
+									],
+									"query": [
+										{
+											"key": "api-version",
+											"value": "2.0"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Incluir Livro - v1.0",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6IjNiMWNhMjc3LWM1NzUtNDk0NC1hN2ZmLWUzZmVmNDlmMTg5ZSIsImV4cCI6MTY0MTQxMzQ5NCwiaXNzIjoiQWx1cmEuV2ViQXBwIiwiYXVkIjoiUG9zdG1hbiJ9.Wls5OHLS6DY12AfYMwB75IVkp-JnUSrUTd9QbjDbnKk",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "Titulo",
+											"value": "ASP.NET Core MVC",
+											"type": "default"
+										},
+										{
+											"key": "Subtitulo",
+											"value": "Aplicações modernas em conjunto com o Entity Framework",
+											"type": "default"
+										},
+										{
+											"key": "Autor",
+											"value": "Everton Coimbra de Araújo",
+											"type": "default"
+										},
+										{
+											"key": "Resumo",
+											"value": "Teste de inclusão de livro",
+											"type": "default"
+										},
+										{
+											"key": "Capa",
+											"value": "",
+											"type": "default"
+										},
+										{
+											"key": "Lista",
+											"value": "ParaLer",
+											"type": "default"
+										},
+										{
+											"key": "",
+											"value": "",
+											"type": "default",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:6001/api/Livros?api-version=1.0",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6001",
+									"path": [
+										"api",
+										"Livros"
+									],
+									"query": [
+										{
+											"key": "api-version",
+											"value": "1.0"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Incluir Livro - v2.0",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6IjNiMWNhMjc3LWM1NzUtNDk0NC1hN2ZmLWUzZmVmNDlmMTg5ZSIsImV4cCI6MTY0MTQxMzQ5NCwiaXNzIjoiQWx1cmEuV2ViQXBwIiwiYXVkIjoiUG9zdG1hbiJ9.Wls5OHLS6DY12AfYMwB75IVkp-JnUSrUTd9QbjDbnKk",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "Titulo",
+											"value": "ASP.NET Core MVC",
+											"type": "default"
+										},
+										{
+											"key": "Subtitulo",
+											"value": "Aplicações modernas em conjunto com o Entity Framework",
+											"type": "default"
+										},
+										{
+											"key": "Autor",
+											"value": "Everton Coimbra de Araújo",
+											"type": "default"
+										},
+										{
+											"key": "Resumo",
+											"value": "Teste de inclusão de livro",
+											"type": "default"
+										},
+										{
+											"key": "Capa",
+											"value": "",
+											"type": "default"
+										},
+										{
+											"key": "Lista",
+											"value": "ParaLer",
+											"type": "default"
+										},
+										{
+											"key": "",
+											"value": "",
+											"type": "default",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:6001/api/Livros?api-version=2.0",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6001",
+									"path": [
+										"api",
+										"Livros"
+									],
+									"query": [
+										{
+											"key": "api-version",
+											"value": "2.0"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Listar Capa do Livro - v1.0",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6IjYxMTdlMGYzLTk3ODQtNGEwNS1hMzYzLTlhNTUwYmRhYjRmZiIsImV4cCI6MTY0MTUwOTE2MywiaXNzIjoiQWx1cmEuV2ViQXBwIiwiYXVkIjoiUG9zdG1hbiJ9.UeHxkNyHaZhimRcSE2crFfdXN3VoiKPAm0Tao-u9YuA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:6001/api/Livros/capa/1?api-version=1.0",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6001",
+									"path": [
+										"api",
+										"Livros",
+										"capa",
+										"1"
+									],
+									"query": [
+										{
+											"key": "api-version",
+											"value": "1.0"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Listar Capa do Livro - v2.0",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6IjYxMTdlMGYzLTk3ODQtNGEwNS1hMzYzLTlhNTUwYmRhYjRmZiIsImV4cCI6MTY0MTUwOTE2MywiaXNzIjoiQWx1cmEuV2ViQXBwIiwiYXVkIjoiUG9zdG1hbiJ9.UeHxkNyHaZhimRcSE2crFfdXN3VoiKPAm0Tao-u9YuA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:6001/api/Livros/capa/1?api-version=2.0",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6001",
+									"path": [
+										"api",
+										"Livros",
+										"capa",
+										"1"
+									],
+									"query": [
+										{
+											"key": "api-version",
+											"value": "2.0"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Listar Listas de Leitura - v1.0",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6IjYxMTdlMGYzLTk3ODQtNGEwNS1hMzYzLTlhNTUwYmRhYjRmZiIsImV4cCI6MTY0MTUwOTE2MywiaXNzIjoiQWx1cmEuV2ViQXBwIiwiYXVkIjoiUG9zdG1hbiJ9.UeHxkNyHaZhimRcSE2crFfdXN3VoiKPAm0Tao-u9YuA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:6001/api/ListasLeitura?api-version=1.0",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6001",
+									"path": [
+										"api",
+										"ListasLeitura"
+									],
+									"query": [
+										{
+											"key": "api-version",
+											"value": "1.0"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Listar Listas de Leitura - v2.0",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6IjYxMTdlMGYzLTk3ODQtNGEwNS1hMzYzLTlhNTUwYmRhYjRmZiIsImV4cCI6MTY0MTUwOTE2MywiaXNzIjoiQWx1cmEuV2ViQXBwIiwiYXVkIjoiUG9zdG1hbiJ9.UeHxkNyHaZhimRcSE2crFfdXN3VoiKPAm0Tao-u9YuA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:6001/api/ListasLeitura?api-version=2.0",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6001",
+									"path": [
+										"api",
+										"ListasLeitura"
+									],
+									"query": [
+										{
+											"key": "api-version",
+											"value": "2.0"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Listar Lista de Leitura por Tipo - v1.0",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6IjYxMTdlMGYzLTk3ODQtNGEwNS1hMzYzLTlhNTUwYmRhYjRmZiIsImV4cCI6MTY0MTUwOTE2MywiaXNzIjoiQWx1cmEuV2ViQXBwIiwiYXVkIjoiUG9zdG1hbiJ9.UeHxkNyHaZhimRcSE2crFfdXN3VoiKPAm0Tao-u9YuA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:6001/api/ListasLeitura/ParaLer?api-version=1.0",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6001",
+									"path": [
+										"api",
+										"ListasLeitura",
+										"ParaLer"
+									],
+									"query": [
+										{
+											"key": "api-version",
+											"value": "1.0"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Listar Lista de Leitura por Tipo - v2.0",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6IjYxMTdlMGYzLTk3ODQtNGEwNS1hMzYzLTlhNTUwYmRhYjRmZiIsImV4cCI6MTY0MTUwOTE2MywiaXNzIjoiQWx1cmEuV2ViQXBwIiwiYXVkIjoiUG9zdG1hbiJ9.UeHxkNyHaZhimRcSE2crFfdXN3VoiKPAm0Tao-u9YuA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:6001/api/ListasLeitura/ParaLer?api-version=2.0",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6001",
+									"path": [
+										"api",
+										"ListasLeitura",
+										"ParaLer"
+									],
+									"query": [
+										{
+											"key": "api-version",
+											"value": "2.0"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Listar Livros - v2.0",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6IjYxMTdlMGYzLTk3ODQtNGEwNS1hMzYzLTlhNTUwYmRhYjRmZiIsImV4cCI6MTY0MTUwOTE2MywiaXNzIjoiQWx1cmEuV2ViQXBwIiwiYXVkIjoiUG9zdG1hbiJ9.UeHxkNyHaZhimRcSE2crFfdXN3VoiKPAm0Tao-u9YuA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:6001/api/Livros?api-version=1.0",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6001",
+									"path": [
+										"api",
+										"Livros"
+									],
+									"query": [
+										{
+											"key": "api-version",
+											"value": "1.0"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Listar Livros - v2.0",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6IjYxMTdlMGYzLTk3ODQtNGEwNS1hMzYzLTlhNTUwYmRhYjRmZiIsImV4cCI6MTY0MTUwOTE2MywiaXNzIjoiQWx1cmEuV2ViQXBwIiwiYXVkIjoiUG9zdG1hbiJ9.UeHxkNyHaZhimRcSE2crFfdXN3VoiKPAm0Tao-u9YuA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:6001/api/Livros?api-version=2.0",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6001",
+									"path": [
+										"api",
+										"Livros"
+									],
+									"query": [
+										{
+											"key": "api-version",
+											"value": "2.0"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Listar Livro por Id - v1.0",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6IjA4MjgxNzg2LTNlNjUtNGI1ZC1iZTg5LWY1ZTk4NzRjYjQ1OSIsImV4cCI6MTY0MTU2ODE4OSwiaXNzIjoiQWx1cmEuV2ViQXBwIiwiYXVkIjoiUG9zdG1hbiJ9.LGZ-vBrMG5Db3PGDk4Yd0hfadxKT5zPfa7u81M9U26E",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:6001/api/Livros/1?api-version=1.0",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6001",
+									"path": [
+										"api",
+										"Livros",
+										"1"
+									],
+									"query": [
+										{
+											"key": "api-version",
+											"value": "1.0"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Listar Livro por Id - v2.0",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6IjA4MjgxNzg2LTNlNjUtNGI1ZC1iZTg5LWY1ZTk4NzRjYjQ1OSIsImV4cCI6MTY0MTU2ODE4OSwiaXNzIjoiQWx1cmEuV2ViQXBwIiwiYXVkIjoiUG9zdG1hbiJ9.LGZ-vBrMG5Db3PGDk4Yd0hfadxKT5zPfa7u81M9U26E",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:6001/api/Livros/1?api-version=2.0",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6001",
+									"path": [
+										"api",
+										"Livros",
+										"1"
+									],
+									"query": [
+										{
+											"key": "api-version",
+											"value": "2.0"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Filtro",
+					"item": [
+						{
+							"name": "Token JWT",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"login\": \"admin\",\r\n    \"password\": \"Admin123!\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/Login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"Login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Listar Livros por Autor - v2.0",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6IjFkZGNjMTAwLWU5M2YtNGZkOS05MWMwLWUwYTgwYWViZjQ1YyIsImV4cCI6MTY0MTgyMTQ1MiwiaXNzIjoiQWx1cmEuV2ViQXBwIiwiYXVkIjoiUG9zdG1hbiJ9.vLSS749YiB_uQ-lXbf5av_p1vb7UQzZ-vg5CxqbYch0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/xml",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "http://localhost:6001/api/v2.0/Livros?Autor=Natan",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6001",
+									"path": [
+										"api",
+										"v2.0",
+										"Livros"
+									],
+									"query": [
+										{
+											"key": "Autor",
+											"value": "Natan"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Listar Livros por Lista - v2.0",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6IjFkZGNjMTAwLWU5M2YtNGZkOS05MWMwLWUwYTgwYWViZjQ1YyIsImV4cCI6MTY0MTgyMTQ1MiwiaXNzIjoiQWx1cmEuV2ViQXBwIiwiYXVkIjoiUG9zdG1hbiJ9.vLSS749YiB_uQ-lXbf5av_p1vb7UQzZ-vg5CxqbYch0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/xml",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "http://localhost:6001/api/v2.0/Livros?Lista=ParaLer",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6001",
+									"path": [
+										"api",
+										"v2.0",
+										"Livros"
+									],
+									"query": [
+										{
+											"key": "Lista",
+											"value": "ParaLer"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Listar Livros por Título - v2.0",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6IjFkZGNjMTAwLWU5M2YtNGZkOS05MWMwLWUwYTgwYWViZjQ1YyIsImV4cCI6MTY0MTgyMTQ1MiwiaXNzIjoiQWx1cmEuV2ViQXBwIiwiYXVkIjoiUG9zdG1hbiJ9.vLSS749YiB_uQ-lXbf5av_p1vb7UQzZ-vg5CxqbYch0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/xml",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "http://localhost:6001/api/v2.0/Livros?Titulo=Bootstrap",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6001",
+									"path": [
+										"api",
+										"v2.0",
+										"Livros"
+									],
+									"query": [
+										{
+											"key": "Titulo",
+											"value": "Bootstrap"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Listar Livros por Subtítulo - v2.0",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6IjFkZGNjMTAwLWU5M2YtNGZkOS05MWMwLWUwYTgwYWViZjQ1YyIsImV4cCI6MTY0MTgyMTQ1MiwiaXNzIjoiQWx1cmEuV2ViQXBwIiwiYXVkIjoiUG9zdG1hbiJ9.vLSS749YiB_uQ-lXbf5av_p1vb7UQzZ-vg5CxqbYch0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/xml",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "http://localhost:6001/api/v2.0/Livros?Subtitulo=Desenvolvimento",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6001",
+									"path": [
+										"api",
+										"v2.0",
+										"Livros"
+									],
+									"query": [
+										{
+											"key": "Subtitulo",
+											"value": "Desenvolvimento"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Ordenação",
+					"item": [
+						{
+							"name": "Token JWT",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"login\": \"admin\",\r\n    \"password\": \"Admin123!\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/Login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"Login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Listar Livros por Autor - v2.0",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6ImYzMmY3NDNmLTA5NDAtNDViYS1iY2JiLWUwNjVhMzM0OGMxNCIsImV4cCI6MTY0MTgyNDEyMiwiaXNzIjoiQWx1cmEuV2ViQXBwIiwiYXVkIjoiUG9zdG1hbiJ9.1IZ9ugbdxi3Z3vZCvMEYUGFHW60ppgNmSRWssiGcTnI",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/xml",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "http://localhost:6001/api/v2.0/Livros?Autor=Natan&OrdenarPor=Titulo",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6001",
+									"path": [
+										"api",
+										"v2.0",
+										"Livros"
+									],
+									"query": [
+										{
+											"key": "Autor",
+											"value": "Natan"
+										},
+										{
+											"key": "OrdenarPor",
+											"value": "Titulo"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Listar Livros por Lista - v2.0",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6ImYzMmY3NDNmLTA5NDAtNDViYS1iY2JiLWUwNjVhMzM0OGMxNCIsImV4cCI6MTY0MTgyNDEyMiwiaXNzIjoiQWx1cmEuV2ViQXBwIiwiYXVkIjoiUG9zdG1hbiJ9.1IZ9ugbdxi3Z3vZCvMEYUGFHW60ppgNmSRWssiGcTnI",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/xml",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "http://localhost:6001/api/v2.0/Livros?Lista=ParaLer&OrdenarPor=Autor",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6001",
+									"path": [
+										"api",
+										"v2.0",
+										"Livros"
+									],
+									"query": [
+										{
+											"key": "Lista",
+											"value": "ParaLer"
+										},
+										{
+											"key": "OrdenarPor",
+											"value": "Autor"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Listar Livros por Subtítulo - v2.0",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6ImYzMmY3NDNmLTA5NDAtNDViYS1iY2JiLWUwNjVhMzM0OGMxNCIsImV4cCI6MTY0MTgyNDEyMiwiaXNzIjoiQWx1cmEuV2ViQXBwIiwiYXVkIjoiUG9zdG1hbiJ9.1IZ9ugbdxi3Z3vZCvMEYUGFHW60ppgNmSRWssiGcTnI",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/xml",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "http://localhost:6001/api/v2.0/Livros?Subtitulo=Desenvolvimento&OrdenarPor=Titulo",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6001",
+									"path": [
+										"api",
+										"v2.0",
+										"Livros"
+									],
+									"query": [
+										{
+											"key": "Subtitulo",
+											"value": "Desenvolvimento"
+										},
+										{
+											"key": "OrdenarPor",
+											"value": "Titulo"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Listar Livros por Título - v2.0",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6ImYzMmY3NDNmLTA5NDAtNDViYS1iY2JiLWUwNjVhMzM0OGMxNCIsImV4cCI6MTY0MTgyNDEyMiwiaXNzIjoiQWx1cmEuV2ViQXBwIiwiYXVkIjoiUG9zdG1hbiJ9.1IZ9ugbdxi3Z3vZCvMEYUGFHW60ppgNmSRWssiGcTnI",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/xml",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "http://localhost:6001/api/v2.0/Livros?Titulo=Web&OrdenarPor=Lista",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6001",
+									"path": [
+										"api",
+										"v2.0",
+										"Livros"
+									],
+									"query": [
+										{
+											"key": "Titulo",
+											"value": "Web"
+										},
+										{
+											"key": "OrdenarPor",
+											"value": "Lista"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Paginação",
+					"item": [
+						{
+							"name": "Token JWT",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"login\": \"admin\",\r\n    \"password\": \"Admin123!\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/Login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"Login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Listar Livros - v2.0",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6IjExNzQ2MWY5LTg5NzYtNDhmOS05ZmUzLTQyNzVjMTYzYzg4YyIsImV4cCI6MTY0MTgzNzE3OCwiaXNzIjoiQWx1cmEuV2ViQXBwIiwiYXVkIjoiUG9zdG1hbiJ9.UuXw51FIfy_M7jOhyxP8W4KTj9K6Z6VjRA1gk62gJaQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/xml",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "http://localhost:6001/api/v2.0/Livros?Tamanho=5&Pagina=2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6001",
+									"path": [
+										"api",
+										"v2.0",
+										"Livros"
+									],
+									"query": [
+										{
+											"key": "Tamanho",
+											"value": "5"
+										},
+										{
+											"key": "Pagina",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Padronizando Erros",
+					"item": [
+						{
+							"name": "Token JWT",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"login\": \"admin\",\r\n    \"password\": \"Admin123!\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/Login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"Login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Listar Livros - v2.0",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6ImQ4NDU0YjMzLTdlNTMtNDhjNS1hYWI2LTUyMTIwZTA3MTliZSIsImV4cCI6MTY0MTg0MDE4MCwiaXNzIjoiQWx1cmEuV2ViQXBwIiwiYXVkIjoiUG9zdG1hbiJ9.amBMl8n0IrKe9nNscd1iw2meU2PGbMB4s40_EzrFs7k",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/xml",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "Titulo",
+											"value": "",
+											"type": "default"
+										},
+										{
+											"key": "Subtitulo",
+											"value": "Teste de Subtítulo",
+											"type": "default"
+										},
+										{
+											"key": "Resumo",
+											"value": "Teste de Resumo",
+											"type": "default"
+										},
+										{
+											"key": "Autor",
+											"value": "Fulando de Tal",
+											"type": "default"
+										},
+										{
+											"key": "Lista",
+											"value": "0",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:6001/api/v2.0/Livros",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6001",
+									"path": [
+										"api",
+										"v2.0",
+										"Livros"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "API ListaLeitura",
+			"item": [
+				{
+					"name": "Token JWT",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"login\": \"admin\",\r\n    \"password\": \"Admin123!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/Login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Login"
+							]
+						},
+						"description": "Gera o Token que deverá ser utilizado nos end-points desta API."
+					},
+					"response": []
+				},
+				{
+					"name": "Listas de Leitura",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6IjIyNDhmYzVlLWE4YjUtNDZkYi1hMTJlLWY5YWEzMzRmYTlkMyIsImV4cCI6MTY0MTkzOTU3NywiaXNzIjoiQWx1cmEuV2ViQXBwIiwiYXVkIjoiUG9zdG1hbiJ9.WIvQ4C_54jUmA148pZjmlQjWDV5mc9og7EipQ-lSrlQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:6001/api/v2.0/ListasLeitura",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6001",
+							"path": [
+								"api",
+								"v2.0",
+								"ListasLeitura"
+							]
+						},
+						"description": "Recupera as listas de leitura com os livros cadastrados, separados por tipo: Para ler, Lendo e Lidos."
+					},
+					"response": []
+				},
+				{
+					"name": "Única Lista de Leitura",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6ImM4YjQzZmJmLWI1M2YtNDA3OS05ZTU5LTNhNjRiZDU0ZjE4NiIsImV4cCI6MTY0MTU3MDc5NiwiaXNzIjoiQWx1cmEuV2ViQXBwIiwiYXVkIjoiUG9zdG1hbiJ9.6piOW8TIRooFrJsy8Kazlbnnq2wWr05iymm93ouv9sw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:6001/api/v2.0/ListasLeitura/ParaLer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6001",
+							"path": [
+								"api",
+								"v2.0",
+								"ListasLeitura",
+								"ParaLer"
+							]
+						},
+						"description": "Recupera uma única lista de leitura com os livros cadastrados, separados por tipo: Para ler, Lendo e Lidos."
+					},
+					"response": []
+				},
+				{
+					"name": "Livros",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6IjFkZGNjMTAwLWU5M2YtNGZkOS05MWMwLWUwYTgwYWViZjQ1YyIsImV4cCI6MTY0MTgyMTQ1MiwiaXNzIjoiQWx1cmEuV2ViQXBwIiwiYXVkIjoiUG9zdG1hbiJ9.vLSS749YiB_uQ-lXbf5av_p1vb7UQzZ-vg5CxqbYch0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/xml",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost:6001/api/v2.0/Livros",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6001",
+							"path": [
+								"api",
+								"v2.0",
+								"Livros"
+							]
+						},
+						"description": "Recupera todos os livros cadastrados."
+					},
+					"response": []
+				},
+				{
+					"name": "Único Livro",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6ImM4YjQzZmJmLWI1M2YtNDA3OS05ZTU5LTNhNjRiZDU0ZjE4NiIsImV4cCI6MTY0MTU3MDc5NiwiaXNzIjoiQWx1cmEuV2ViQXBwIiwiYXVkIjoiUG9zdG1hbiJ9.6piOW8TIRooFrJsy8Kazlbnnq2wWr05iymm93ouv9sw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/csv",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost:6001/api/v2.0/Livros/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6001",
+							"path": [
+								"api",
+								"v2.0",
+								"Livros",
+								"1"
+							]
+						},
+						"description": "Recupera um livro específico, identificado por seu Id."
+					},
+					"response": []
+				},
+				{
+					"name": "Capa do Livro",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6ImM4YjQzZmJmLWI1M2YtNDA3OS05ZTU5LTNhNjRiZDU0ZjE4NiIsImV4cCI6MTY0MTU3MDc5NiwiaXNzIjoiQWx1cmEuV2ViQXBwIiwiYXVkIjoiUG9zdG1hbiJ9.6piOW8TIRooFrJsy8Kazlbnnq2wWr05iymm93ouv9sw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:6001/api/v2.0/Livros/capa/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6001",
+							"path": [
+								"api",
+								"v2.0",
+								"Livros",
+								"capa",
+								"1"
+							]
+						},
+						"description": "Recupera a capa de um livro específico, identificado por seu Id.  \nRetorna uma imagem no formato image/png."
+					},
+					"response": []
+				},
+				{
+					"name": "Incluir Livro",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6ImM4YjQzZmJmLWI1M2YtNDA3OS05ZTU5LTNhNjRiZDU0ZjE4NiIsImV4cCI6MTY0MTU3MDc5NiwiaXNzIjoiQWx1cmEuV2ViQXBwIiwiYXVkIjoiUG9zdG1hbiJ9.6piOW8TIRooFrJsy8Kazlbnnq2wWr05iymm93ouv9sw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "Titulo",
+									"value": "ASP.NET Core MVC",
+									"type": "default"
+								},
+								{
+									"key": "Subtitulo",
+									"value": "Aplicações modernas em conjunto com o Entity Framework",
+									"type": "default"
+								},
+								{
+									"key": "Autor",
+									"value": "Everton Coimbra de Araújo",
+									"type": "default"
+								},
+								{
+									"key": "Resumo",
+									"value": "Teste de inclusão de livro",
+									"type": "default"
+								},
+								{
+									"key": "Capa",
+									"value": "",
+									"type": "default"
+								},
+								{
+									"key": "Lista",
+									"value": "ParaLer",
+									"type": "default"
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "default",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:6001/api/v2.0/Livros",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6001",
+							"path": [
+								"api",
+								"v2.0",
+								"Livros"
+							]
+						},
+						"description": "inclui um livro no repositório.  \nDados do livro devem ser passados em multipart-formdata."
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Livro",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6IjYxMTdlMGYzLTk3ODQtNGEwNS1hMzYzLTlhNTUwYmRhYjRmZiIsImV4cCI6MTY0MTUwOTE2MywiaXNzIjoiQWx1cmEuV2ViQXBwIiwiYXVkIjoiUG9zdG1hbiJ9.UeHxkNyHaZhimRcSE2crFfdXN3VoiKPAm0Tao-u9YuA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "Id",
+									"value": "6022",
+									"type": "default"
+								},
+								{
+									"key": "Titulo",
+									"value": "Introdução à Visão Computacional",
+									"type": "default"
+								},
+								{
+									"key": "Subtitulo",
+									"value": "Uma abordagem prática com Python e OpenCV",
+									"type": "default"
+								},
+								{
+									"key": "Autor",
+									"value": "Felipe Barelu",
+									"type": "default"
+								},
+								{
+									"key": "Resumo",
+									"value": "",
+									"type": "default"
+								},
+								{
+									"key": "Capa",
+									"value": "",
+									"type": "default"
+								},
+								{
+									"key": "Lista",
+									"value": "Lidos",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:6001/api/v2.0/Livros",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6001",
+							"path": [
+								"api",
+								"v2.0",
+								"Livros"
+							]
+						},
+						"description": "Atualiza os dados de um livro específico.  \nDados do livro devem ser passados em multipart-formdata."
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar Livro",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6IjNiMWNhMjc3LWM1NzUtNDk0NC1hN2ZmLWUzZmVmNDlmMTg5ZSIsImV4cCI6MTY0MTQxMzQ5NCwiaXNzIjoiQWx1cmEuV2ViQXBwIiwiYXVkIjoiUG9zdG1hbiJ9.Wls5OHLS6DY12AfYMwB75IVkp-JnUSrUTd9QbjDbnKk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:6001/api/v2.0/Livros/5021",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6001",
+							"path": [
+								"api",
+								"v2.0",
+								"Livros",
+								"5021"
+							]
+						},
+						"description": "Remove um livro específico, identificado por seu Id."
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
